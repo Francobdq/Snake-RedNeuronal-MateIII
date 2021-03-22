@@ -10,30 +10,6 @@ NOTA: La versión que esta en google colab es una versión previa a esta (sin in
 
 # El trabajo consta de la implementacion y explicacion de una red neuronal basica
 
-#¿ Qué es una red neuronal? 
-
-# Utilidad
-
-# Neurona
-
-# Necesidad de mas neuronas en la red
-
-# Capa
-
-# Surgimiento de funcion de activacion
-
-# Jerarquia de conocimiento (cada capa se especializa un poco más)
-
-# Funcionamiento de Red neuronal
-
-# Tipos de Aprendizaje y forma 
-
-
-# Funcion de coste
-
-# Ejemplos de otros tipos 
-
-# Explicación de algoritmos evolutivos
 
 import random as ran # los valores aleatorios
 import numpy as np # Calculos matematicos
@@ -694,9 +670,9 @@ class Game():
          puntuacion = int(self.snake.tiempoViva/10) * np.power(2, self.snake.cola) # el tiempo viva/10 + 2^cola
             
       else: # Para no tener numeros tan grandes
-        puntuacion = self.snake.tiempoViva * self.snake.tiempoViva;
-        puntuacion *= np.power(2, 10);
-        puntuacion *= (self.snake.cola - 9);
+        puntuacion = self.snake.tiempoViva * self.snake.tiempoViva
+        puntuacion *= np.power(2, 10)
+        puntuacion *= (self.snake.cola - 9)
       
       return puntuacion 
 
@@ -777,8 +753,8 @@ class Game():
         if(salida[mayor] < salida[i]):
           mayor = i
           
-      mayor = (mayor+1) * 2; # se multiplica por 2 para transformar el uno en 2, el dos en 4, el tres en 6 y el cuatro en 8 y convertirlos así en el codigo del movimiento
-      return mayor; # devuelve 2, 4, 6 u 8
+      mayor = (mayor+1) * 2 # se multiplica por 2 para transformar el uno en 2, el dos en 4, el tres en 6 y el cuatro en 8 y convertirlos así en el codigo del movimiento
+      return mayor # devuelve 2, 4, 6 u 8
     else:
       self.MostrarTableroConsola()
       return int(input())
